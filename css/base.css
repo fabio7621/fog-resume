@@ -1,0 +1,33 @@
+/* 全域基礎樣式 */
+html,
+body {
+  min-height: 100%;
+}
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.75;
+}
+body.is-intro {
+  background: var(--soot);
+  color: var(--fog);
+  overflow: hidden;
+  height: 100%;
+}
+a {
+  color: var(--ink);
+  text-underline-offset: 3px;
+}
+button {
+  font: inherit;
+}
+:focus-visible {
+  outline: 2px solid var(--shu);
+  outline-offset: 3px;
+}
+.is-intro :focus-visible {
+  outline-color: var(--lamp);
+}

@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  <title>李承哲的履歷</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@500;700&family=Noto+Serif+TC:wght@400;700;900&display=swap"
+  />
+  <link rel="stylesheet" href="css/main.css" />
+  <script type="module" src="js/main.js"></script>
+</head>
+<body class="is-intro">
+  <!-- ================= 開場 ================= -->
+  <div id="intro">
+    <canvas
+      id="scene"
+      aria-label="一名穿斗篷大衣、戴帽拄杖的偵探在濃霧籠罩的煤氣燈街道上持續行走的像素動畫"
+    ></canvas>
+    <header class="masthead">
+      <p class="eyebrow">Case File · Tainan · 能見度 ≈ <b id="vis">—</b> m</p>
+      <h1>李承哲的履歷</h1>
+      <p class="en">Fabio Lee — Frontend Engineer</p>
+    </header>
+    <button class="cta" id="enter" type="button">
+      點一下，走出霧中 <span class="caret" aria-hidden="true">▸</span>
+    </button>
+    <p class="hint">拖曳可以攪動霧氣</p>
+    <div id="veil"></div>
+  </div>
+
+  <!-- ================= 履歷頁（日式報紙架構） ================= -->
+  <div id="resume" hidden>
+    <nav class="nav" aria-label="頁面導覽">
+      <div class="wrap">
+        <span class="brand">李承哲的履歷</span>
+        <ul>
+          <li><a href="#front">頭版</a></li>
+          <li><a href="#career">經歷</a></li>
+          <li><a href="#skills">技能</a></li>
+          <li><a href="#works">作品</a></li>
+          <li><a href="#serial">連載</a></li>
+          <li><a href="#contact">聯絡</a></li>
+        </ul>
+        <button class="back" id="back" type="button">◂ 回到霧中</button>
+      </div>
+    </nav>
+
+    <main class="wrap">
+      <!-- 題字 -->
+      <header class="banner">
+        <div class="meta">
+          <span id="today">2026年10月1日</span>
+          <span
+            ><span id="weekday">星期四</span>・民國
+            <span id="roc">115</span> 年</span
+          >
+          <span>台南版</span>
+        </div>
+        <div class="banner-title">
+          <h1 id="resume-title" tabindex="-1">李承哲的履歷</h1>
+          <p class="banner-en">The Fog Walker Gazette</p>
+        </div>
+        <div class="meta right">
+          <span class="gogai">號外</span>
+          <span>前端工程師　求職特刊</span>
+        </div>
+      </header>
+
+      <!-- 本期重點：三秒看完 -->
+      <section class="brief" aria-labelledby="brief-tab">
+        <h2 class="brief-tab" id="brief-tab">本期重點</h2>
+        <div class="brief-body">
+          <ul>
+            <li>您好，我是承哲，曾在行銷公司擔任前端切版工作兩年半</li>
+            <li>
+              參與多項企業官網專案，熟悉 HTML、CSS、Bootstrap，並具備 Vue 與 React
+              基礎應用能力
+            </li>
+            <li>
+              目前是好想工作室 Web Camp 進駐學員，持續練習程式、解決問題與學習方法
+            </li>
+          </ul>
+          <div class="stack">
+            <b>常用工具</b><span class="chip">JavaScript (ES6+)</span
+            ><span class="chip">Vue 3</span><span class="chip">React</span
+            ><span class="chip">SCSS</span><span class="chip">Tailwind</span
+            ><span class="chip">Bootstrap 5</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 頭版：人物報導 -->
+      <section class="front" id="front" aria-labelledby="front-head">
+        <h2 class="vhead" id="front-head">
+          <span class="vstack">設計背景出身的</span
+          ><span class="vstack">前端工程師</span
+          ><span class="vstack">正在找<em>下一個團隊</em></span>
+        </h2>
+
+        <article class="front-main">
+          <p class="kicker">頭版｜人物</p>
+          <p class="deck">
+            兩年半企業官網切版實務，從設計稿一路做到上線；目前主要使用 Vue 3 與
+            React。
+          </p>
+          <div class="cols">
+            <figure class="portrait">
+              <img
+                src="img/avatar.jpg"
+                alt="李承哲的大頭照"
+                width="360"
+                height="360"
+              />
+              <figcaption>▲李承哲（Fabio）</figcaption>
+            </figure>
+            <p>
+              我是承哲，設計科系畢業後轉職前端，目前主要開發技術是 Vue 3 與
+              React。在行銷公司擔任前端的兩年半期間，<span class="mark"
+                >獨立完成多個企業官網的切版與功能實作</span
+              >，也負責維護與修復公司既有的舊專案。
+            </p>
+            <p>
+              設計背景是我在前端工作上的優勢。從 Amos
+              的網頁切版班開始，我養成的習慣是<span class="mark"
+                >理解每個 CSS 屬性的行為</span
+              >，而不是靠試錯堆出結果，這讓我在還原設計稿與處理複雜版面時，知道自己每一行為什麼這樣寫。
+            </p>
+            <p>
+              在切版這塊，AI 目前還是有明顯不足，版面一複雜，產出的間距、對齊與
+              RWD 斷點往往需要人工重修，反覆修正也會耗費多餘的時間與
+              token。過去兩年半的切版經驗讓我在處理複雜版面時更有條理，能避免 AI
+              協作產出多餘的程式碼，而不是一再丟回去讓它重試。閱讀《Code
+              Complete》後，我開始關注程式的內聚力、命名與可維護性，並<span
+                class="mark"
+                >整理成一套自己的開發規範</span
+              >。
+            </p>
+            <p>
+              2025 年 12 月起，我在好想工作室 Web Camp
+              擔任進駐學員。即使部分內容過去接觸過，我仍選擇從基礎重新建立，這次補強的不只是語法，還包括測試撰寫、I/O
+              設計這些過去實務中沒機會深入的工程觀念，以及拆解問題的流程。
+            </p>
+            <p>
+              我也曾參與台南市衛生局菸酒業務單位的流程優化專案，實地訪談承辦人員釐清作業痛點，產出
+              prototype
+              並參與提案，協助把使用者需求轉化為具體的系統設計方向。對我來說，寫程式是手段，<span
+                class="mark"
+                >找到真正的問題並解決它才是價值所在</span
+              >。
+            </p>
+          </div>
+        </article>
+
+        <aside class="status" aria-label="求職狀態">
+          <p class="box-head">求職狀態</p>
+          <dl>
+            <div>
+              <dt>職缺</dt>
+              <dd>前端工程師（Vue 3 / React）</dd>
+            </div>
+            <div>
+              <dt>到職</dt>
+              <dd>隨時</dd>
+            </div>
+            <div>
+              <dt>地點</dt>
+              <dd>台南</dd>
+            </div>
+            <div>
+              <dt>方向</dt>
+              <dd>產品型前端、需要設計與實作整合的團隊</dd>
+            </div>
+          </dl>
+          <div class="stamp-wrap">
+            <div class="stamp" aria-hidden="true">求職中</div>
+            <div class="jump">
+              <a href="#works">看作品</a><a href="#contact">聯絡我</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- 經歷 -->
+      <section class="sheet" id="career" aria-labelledby="career-tab">
+        <h2 class="tab" id="career-tab">經歷</h2>
+        <div class="sheet-body">
+          <p class="sheet-lede">工作經歷，由近到遠排列</p>
+          <ol class="career" id="timeline"></ol>
+        </div>
+      </section>
+
+      <!-- 技能 -->
+      <section class="sheet" id="skills" aria-labelledby="skills-tab">
+        <h2 class="tab" id="skills-tab">技能</h2>
+        <div class="sheet-body">
+          <p class="sheet-lede">以下為目前實際使用於專案的技術</p>
+          <div class="market" id="skill-grid"></div>
+          <a
+            class="contrib"
+            href="https://github.com/fabio7621/code-complete-design"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p class="v">寄稿</p>
+            <div>
+              <h3>寫給 AI 的 JavaScript 程式碼設計規範</h3>
+              <code>~/.claude/skills/code-complete-design</code>
+              <p>
+                AI 產出的程式碼常常「能跑，但讀起來很差」。我把《Code Complete》第
+                7、10、14 章的命名、函式職責、變數與程式碼組織原則整理成 Claude
+                Code 的 Skill，讓它在動手前先讀規範，而不是產出之後再靠 review
+                補救。
+              </p>
+              <p class="more">▶ 在 GitHub 閱讀全文</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- 作品 -->
+      <section class="sheet" id="works" aria-labelledby="works-tab">
+        <h2 class="tab" id="works-tab">作品</h2>
+        <div class="sheet-body">
+          <p class="sheet-lede">
+            持續更新中，每則報導都可以連到 live demo 或 repo
+          </p>
+          <h3 class="subhead">精選專案 <small>實務與課程專案</small></h3>
+          <div class="articles" id="works-main"></div>
+          <h3 class="subhead">
+            AI 協作開發 <small>先寫規格、再和 AI 一起實作的實驗作品</small>
+          </h3>
+          <div class="articles" id="works-ai"></div>
+        </div>
+      </section>
+
+      <!-- 連載：部落格 -->
+      <section class="sheet" id="serial" aria-labelledby="serial-tab">
+        <h2 class="tab" id="serial-tab">連載</h2>
+        <div class="sheet-body">
+          <p class="sheet-lede">部落格｜iThome 鐵人賽系列文，每天一篇</p>
+          <div class="serial">
+            <div class="serial-card">
+              <p class="event">2026 iThome 鐵人賽 · Modern Web 組</p>
+              <h3>重新認識 Vue 走過路過不要錯過</h3>
+              <p>
+                從基礎 JS 的 Proxy 起頭，用我自己的方式重新剖析 Vue。以前確實學過
+                Vue，但這次主打：走過路過，不要錯過。
+              </p>
+              <div class="stampcard" id="stampcard" aria-hidden="true"></div>
+              <p class="progress" id="progress">已連載 16／30 天</p>
+              <div class="serial-links">
+                <a
+                  href="https://ithelp.ithome.com.tw/users/20184288/ironman/9801"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >在 iThome 追蹤 ↗</a
+                >
+                <a
+                  href="https://fabio7621.github.io/resume-blog/blog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >部落格 ↗</a
+                >
+              </div>
+            </div>
+            <div>
+              <ol class="posts" id="posts-latest"></ol>
+              <details class="more-posts">
+                <summary id="more-summary">看更早的文章</summary>
+                <ol class="posts" id="posts-older"></ol>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 聯絡 -->
+      <section class="sheet" id="contact" aria-labelledby="contact-tab">
+        <h2 class="tab" id="contact-tab">聯絡</h2>
+        <div class="sheet-body">
+          <div class="ad">
+            <div class="ad-in">
+              <p class="box-head">求職廣告</p>
+              <p class="ad-title">前端工程師　一名</p>
+              <p class="ad-copy">
+                Vue
+                3／React。隨時可到職，台南或遠端皆可。履歷、作品細節或合作邀約，歡迎直接來信。
+              </p>
+              <dl>
+                <div>
+                  <dt>電子郵件</dt>
+                  <dd>
+                    <span class="val" id="email">d6200121a@gmail.com</span
+                    ><button type="button" id="copy-email">複製</button
+                    ><a href="mailto:d6200121a@gmail.com">寄信</a>
+                  </dd>
+                </div>
+                <div>
+                  <dt>GitHub</dt>
+                  <dd>
+                    <span class="val">github.com/fabio7621</span
+                    ><a
+                      href="https://github.com/fabio7621"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >開啟 ↗</a
+                    >
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="colophon wrap">
+      <span>發行人　李承哲</span>
+      <span>發行地　台南</span>
+      <span>本報開場霧氣以 Stable Fluids 即時模擬</span>
+      <span>© 2026</span>
+    </footer>
+  </div>
+</body>
+</html>

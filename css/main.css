@@ -1,0 +1,26 @@
+/* 樣式進入點：順序即層疊順序，新增檔案請依區塊插入 */
+
+/* 基礎 */
+@import url("tokens.css");
+@import url("base.css");
+
+/* 開場 */
+@import url("intro.css");
+
+/* 履歷頁：骨架與共用元件 */
+@import url("resume/layout.css");
+@import url("resume/components.css");
+@import url("resume/nav.css");
+
+/* 履歷頁：各版（依頁面由上到下） */
+@import url("resume/banner.css");
+@import url("resume/brief.css");
+@import url("resume/front.css");
+@import url("resume/career.css");
+@import url("resume/skills.css");
+@import url("resume/works.css");
+@import url("resume/serial.css");
+@import url("resume/contact.css");
+
+/* 動態 */
+@import url("resume/motion.css");

@@ -1,0 +1,31 @@
+/* 設計變數：色票、字體 */
+/* Layout: 開場＝全版像素畫布（夜霧）；點擊後濃霧湧滿畫面，霧散成一張日式報紙架構、明亮和色的履歷。
+ 單一外觀：霧中街景 → 霧色紙面，不分深淺色 */
+:root {
+  --soot: #17150f; /* 夜霧：開場底色 */
+  --smoke: rgba(23, 21, 15, 0.84);
+  --fog: #d8cfae; /* 開場文字 */
+  --fog-dim: #b3aa8a;
+  --lamp: #f0c878; /* 煤氣燈 */
+  --line: rgba(201, 162, 102, 0.5);
+  --page: #fbf8f1; /* 霧散後的晨報紙面 */
+  --page-2: #f2ede1;
+  --ink: #22201b;
+  --ink-2: #57513f;
+  --hair: rgba(34, 32, 27, 0.22);
+  --shu: #c4372c; /* 朱：頭版、作品 */
+  --shu-tint: #fbe9e5;
+  --ai: #2c5b8e; /* 藍：經歷、求職狀態 */
+  --ai-tint: #e8eff7;
+  --take: #35775a; /* 竹：技能 */
+  --take-tint: #e6f2ea;
+  --fuji: #6a4f93; /* 藤：連載 */
+  --fuji-tint: #efe9f6;
+  --kiiro: #f4cf5d; /* 山吹：螢光筆重點 */
+  --kiiro-tint: #fdf5d8;
+  --display-en: "IM Fell English SC", "Iowan Old Style", Georgia, serif;
+  --serif: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+  --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}

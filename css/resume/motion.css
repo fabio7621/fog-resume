@@ -1,0 +1,33 @@
+/* 從霧中浮現 */
+#resume.arrive .banner,
+#resume.arrive .brief,
+#resume.arrive .front,
+#resume.arrive .nav {
+  animation: emerge 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+#resume.arrive .brief {
+  animation-delay: 0.08s;
+}
+#resume.arrive .front {
+  animation-delay: 0.16s;
+}
+@keyframes emerge {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #resume.arrive .banner,
+  #resume.arrive .brief,
+  #resume.arrive .front,
+  #resume.arrive .nav {
+    animation: none;
+  }
+}

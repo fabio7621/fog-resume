@@ -1,0 +1,222 @@
+/* 頭版：人物報導＋求職狀態 */
+.front {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr) auto;
+  grid-template-areas: "status main vhead";
+  padding-block: 30px 40px;
+  border-bottom: 2px solid var(--ink);
+  scroll-margin-top: calc(54px + env(safe-area-inset-top, 0px));
+}
+.front > * {
+  min-width: 0;
+}
+/* 直書：一行只放得下一個字，讓它自動換行（不靠 writing-mode，字型缺直排資料也不會疊字） */
+.vstack {
+  display: block;
+  width: 1em;
+  word-break: break-all;
+  text-align: center;
+}
+.vhead {
+  grid-area: vhead;
+  margin: 0;
+  padding-left: 24px;
+  border-left: 1px solid var(--hair);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  gap: 0.4em;
+  font-weight: 900;
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  line-height: 1.2;
+}
+.vhead em {
+  font-style: normal;
+  color: var(--shu);
+}
+.front-main {
+  grid-area: main;
+  padding-inline: 28px;
+}
+.kicker {
+  margin: 0 0 0.5rem;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--shu);
+}
+.deck {
+  margin: 0 0 1.1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--hair);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  line-height: 1.55;
+  text-wrap: balance;
+}
+.cols {
+  column-count: 2;
+  column-gap: 28px;
+  column-rule: 1px solid var(--hair);
+  text-align: justify;
+}
+.cols p {
+  margin: 0 0 0.7rem;
+  text-indent: 1em;
+}
+.portrait {
+  float: left;
+  width: 112px;
+  margin: 0.45rem 16px 0.3rem 0;
+}
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border: 1px solid var(--ink);
+}
+.portrait figcaption {
+  margin-top: 4px;
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--ink-2);
+  text-indent: 0;
+  text-align: left;
+}
+
+.status {
+  grid-area: status;
+  padding-right: 24px;
+  border-right: 1px solid var(--hair);
+}
+.status dl {
+  margin: 0;
+  display: grid;
+}
+.status dl div {
+  padding: 0.6rem 0;
+  border-bottom: 1px dotted var(--hair);
+}
+.status dt {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ai);
+}
+.status dd {
+  margin: 0;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+.stamp {
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  margin: 1.2rem auto 0.5rem;
+  border-radius: 50%;
+  border: 3px solid var(--shu);
+  box-shadow:
+    inset 0 0 0 3px var(--page),
+    inset 0 0 0 4px var(--shu);
+  color: var(--shu);
+  font-weight: 900;
+  font-size: 1.3rem;
+  letter-spacing: 0.06em;
+  transform: rotate(-12deg);
+}
+.jump {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.jump a {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--page);
+}
+.jump a + a {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+}
+.jump a:hover {
+  background: var(--shu);
+  color: #fff;
+  border-color: var(--shu);
+}
+
+@media (max-width: 1000px) {
+  .front {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "main vhead" "status status";
+  }
+  .front-main {
+    padding-left: 0;
+  }
+  .status {
+    padding: 24px 0 0;
+    margin-top: 24px;
+    border-right: 0;
+    border-top: 1px solid var(--hair);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0 28px;
+    align-items: center;
+  }
+  .status .box-head {
+    grid-column: 1/-1;
+  }
+  .status .stamp-wrap {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+@media (max-width: 720px) {
+  .cols {
+    column-count: 1;
+  }
+}
+@media (max-width: 600px) {
+  .front {
+    grid-template-columns: 1fr;
+    grid-template-areas: "vhead" "main" "status";
+  }
+  .vhead {
+    display: block;
+    padding: 0 0 14px;
+    margin-bottom: 18px;
+    border-left: 0;
+    border-bottom: 1px solid var(--hair);
+    font-size: 1.75rem;
+    line-height: 1.4;
+  }
+  .vhead .vstack {
+    display: inline;
+    width: auto;
+  }
+  .vhead .vstack + .vstack::before {
+    content: "，";
+    color: var(--ink);
+  }
+  .front-main {
+    padding: 0;
+  }
+  .status {
+    grid-template-columns: 1fr;
+  }
+  .status .stamp-wrap {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}

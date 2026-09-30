@@ -1,0 +1,119 @@
+/* 連載（部落格） */
+.serial {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 28px 40px;
+  align-items: start;
+}
+.serial-card {
+  padding: 22px 24px;
+  background: var(--sec-tint);
+  border-top: 4px solid var(--sec);
+}
+.serial-card .event {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--sec);
+}
+.serial-card h3 {
+  margin: 0.25rem 0 0.6rem;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+.serial-card p {
+  margin: 0 0 0.8rem;
+  font-size: 1rem;
+}
+.stampcard {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 6px;
+  margin: 16px 0 8px;
+}
+.stampcard i {
+  display: block;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1.5px solid var(--sec);
+  background: var(--page);
+}
+.stampcard i.on {
+  background: var(--sec);
+}
+.progress {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.serial-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.serial-links a {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.3rem 0.95rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--sec);
+  color: var(--sec);
+  background: var(--page);
+}
+.serial-links a:first-child {
+  background: var(--sec);
+  color: #fff;
+}
+.posts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.posts a {
+  display: grid;
+  grid-template-columns: 4.2em minmax(0, 1fr);
+  gap: 0 14px;
+  padding: 0.75rem 0;
+  border-bottom: 1px dotted var(--hair);
+  text-decoration: none;
+  color: var(--ink);
+}
+.posts .day {
+  font-family: var(--mono);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--sec);
+  grid-row: span 2;
+}
+.posts .t {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+.posts .d {
+  font-family: var(--mono);
+  font-size: 1rem;
+  color: var(--ink-2);
+}
+.posts a:hover .t {
+  color: var(--sec);
+}
+.more-posts summary {
+  cursor: pointer;
+  padding: 0.8rem 0;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--sec);
+}
+@media (max-width: 860px) {
+  .serial {
+    grid-template-columns: 1fr;
+  }
+}

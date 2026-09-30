@@ -1,0 +1,26 @@
+/* 共用小元件：螢光筆、標籤、色塊標題 */
+.mark {
+  background: linear-gradient(transparent 58%, var(--kiiro) 58%);
+  padding: 0 0.08em;
+}
+.chip {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0.1rem 0.65rem;
+  border-radius: 999px;
+  background: var(--page);
+  border: 1px solid var(--hair);
+  white-space: nowrap;
+}
+.box-head {
+  margin: 0;
+  padding: 0.35rem 0.75rem;
+  background: var(--ai);
+  color: #fff;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+}

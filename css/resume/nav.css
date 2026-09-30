@@ -1,0 +1,70 @@
+/* 導覽 */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  padding-top: env(safe-area-inset-top, 0px);
+  background: rgba(251, 248, 241, 0.94);
+  backdrop-filter: blur(6px);
+  border-bottom: 2px solid var(--ink);
+}
+.nav .wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 54px;
+}
+.nav .brand {
+  font-weight: 900;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+.nav ul {
+  display: flex;
+  margin: 0 0 0 auto;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+  min-width: 0;
+}
+.nav ul a {
+  display: block;
+  padding: 0.25rem 0.7rem;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+}
+.nav ul a:hover {
+  border-bottom-color: var(--shu);
+}
+.back {
+  flex-shrink: 0;
+  border: 1.5px solid var(--ink);
+  background: var(--page);
+  border-radius: 999px;
+  cursor: pointer;
+  padding: 0.25rem 0.85rem;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.back:hover {
+  background: var(--ink);
+  color: var(--page);
+}
+@media (max-width: 680px) {
+  .nav .brand {
+    display: none;
+  }
+  .nav ul {
+    margin-left: 0;
+  }
+}

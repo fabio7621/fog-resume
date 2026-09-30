@@ -1,0 +1,80 @@
+/* 履歷頁骨架：日式報紙架構 × 明亮和色 */
+#resume {
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color: var(--ink);
+}
+.wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-inline: clamp(16px, 4vw, 40px);
+}
+
+/* 各版：直書色塊欄名，每一版一個和色 */
+.sheet {
+  --sec: var(--ink);
+  --sec-tint: var(--page-2);
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0 clamp(16px, 2.5vw, 30px);
+  padding-block: 44px 48px;
+  border-bottom: 2px solid var(--ink);
+  scroll-margin-top: calc(54px + env(safe-area-inset-top, 0px));
+}
+#career {
+  --sec: var(--ai);
+  --sec-tint: var(--ai-tint);
+}
+#skills {
+  --sec: var(--take);
+  --sec-tint: var(--take-tint);
+}
+#works {
+  --sec: var(--shu);
+  --sec-tint: var(--shu-tint);
+}
+#serial {
+  --sec: var(--fuji);
+  --sec-tint: var(--fuji-tint);
+}
+.tab {
+  align-self: start;
+  margin: 0;
+  width: 1em;
+  box-sizing: content-box;
+  padding: 0.8rem 0.5rem;
+  background: var(--sec);
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  text-align: center;
+  word-break: break-all;
+}
+.sheet-body {
+  min-width: 0;
+}
+.sheet-lede {
+  margin: 0 0 1.4rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--sec);
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--ink-2);
+}
+
+/* 版尾 */
+.colophon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 24px;
+  padding-block: 16px calc(28px + env(safe-area-inset-bottom, 0px));
+  border-top: 6px double var(--ink);
+  margin-top: -2px;
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--ink-2);
+}
+#resume-title:focus {
+  outline: none;
+}

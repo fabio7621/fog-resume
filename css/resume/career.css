@@ -1,0 +1,55 @@
+/* 經歷 */
+.career {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.career > li {
+  padding-top: 14px;
+  border-top: 4px solid var(--sec);
+}
+.when {
+  font-family: var(--mono);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--sec);
+  font-variant-numeric: tabular-nums;
+}
+.career h3 {
+  margin: 0.2rem 0 0;
+  font-weight: 900;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+.org {
+  margin: 0.15rem 0 0.6rem;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink-2);
+}
+.career ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+.career ul li {
+  padding-left: 1em;
+  text-indent: -1em;
+  margin-bottom: 0.3rem;
+}
+.career ul li::before {
+  content: "・";
+}
+@media (max-width: 860px) {
+  .career {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+}

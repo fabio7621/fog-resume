@@ -1,0 +1,76 @@
+/* 聯絡：求職廣告欄 */
+.ad {
+  max-width: 680px;
+  border: 2px solid var(--ink);
+  padding: 4px;
+  background: var(--page);
+}
+.ad-in {
+  border: 1px solid var(--ink);
+  padding: 20px 22px;
+}
+.ad .box-head {
+  display: inline-block;
+  background: var(--shu);
+}
+.ad-title {
+  margin: 0.8rem 0 0.2rem;
+  font-weight: 900;
+  font-size: clamp(1.6rem, 3.4vw, 2.1rem);
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+}
+.ad-copy {
+  margin: 0 0 1rem;
+  font-size: 1.0625rem;
+  color: var(--ink-2);
+}
+.ad dl {
+  margin: 0;
+  display: grid;
+}
+.ad dl div {
+  display: grid;
+  grid-template-columns: 5.5em minmax(0, 1fr);
+  gap: 4px 12px;
+  align-items: baseline;
+  padding: 0.65rem 0;
+  border-top: 1px dotted var(--hair);
+}
+.ad dt {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink-2);
+}
+.ad dd {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  align-items: baseline;
+}
+.ad .val {
+  font-family: var(--mono);
+  font-size: 1rem;
+  word-break: break-all;
+  user-select: all;
+}
+.ad dd a,
+.ad dd button {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--shu);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 440px) {
+  .ad dl div {
+    grid-template-columns: 1fr;
+  }
+}
