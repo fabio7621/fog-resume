@@ -4,7 +4,9 @@
       "Bash(python3 -)",
       "Bash(python3 -m http.server 8765 --bind 127.0.0.1)",
       "Bash(python3 -m http.server 8766 --bind 127.0.0.1)",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "Bash(curl -sI https://fabio7621.github.io/fog-resume/)",
+      "Bash(curl -s https://fabio7621.github.io/fog-resume/js/main.js)"
     ]
   }
 }
